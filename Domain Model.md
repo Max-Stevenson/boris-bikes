@@ -1,4 +1,5 @@
 | Objects | Messages |
 | ------- | -------- |
 | Person  | 				 |
-| Bike		| release_a_bike |
+| Docking_station | release_a_bike |
+| Bike | check_bike_is_working |
