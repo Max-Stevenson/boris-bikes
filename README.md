@@ -8,6 +8,6 @@ This is part of the Makers Academy week one cirriculum.
 
 # Technology
 
-Built with
+##**Built with**
 
-- Ruby
+* Ruby
