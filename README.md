@@ -1,4 +1,4 @@
-# boris-bikes
+# Boris Bikes
 
 This is a project to emulate the Boris Bikes of London - creating a network of docking stations and bikes along with associated infrastructure(repair staff, ect.)
 
