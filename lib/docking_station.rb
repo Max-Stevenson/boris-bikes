@@ -9,6 +9,10 @@ class DockingStation
 	end
 
 	def dock_bike (bike)
-		@bike = bike
+		if self.bike.is_a?(Bike)
+			raise "No capacity"
+		else
+			@bike = bike
+		end
 	end
 end
