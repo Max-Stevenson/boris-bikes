@@ -22,8 +22,7 @@ describe DockingStation do
 
 	describe '#dock_bike' do
 		it "store a bike argument as an attribute of a Docking Station instance" do
-			bike = Bike.new
-			expect(subject.dock_bike(bike)).to eq bike
+			expect(station.dock_bike(bike)).to eq bike
 		end
 	end
 
