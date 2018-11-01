@@ -4,7 +4,7 @@ describe DockingStation do
 	let(:station) {station = DockingStation.new}
 	let(:bike) {bike = Bike.new}
 
-	it {is_expected.to respond_to :bike}
+	it {is_expected.to respond_to :bikes}
 
 	describe '#release_bike' do
 		it "releases a Bike object" do
@@ -22,7 +22,7 @@ describe DockingStation do
 
 	describe '#dock_bike' do
 		it "store a bike argument as an attribute of a Docking Station instance" do
-			expect(station.dock_bike(bike)).to eq bike
+			expect(station.dock_bike(bike)[0]).to eq bike
 		end
 	end
 
@@ -34,7 +34,7 @@ describe DockingStation do
 
 	describe 'no capacity' do 
 		it "throws an error if store bike is called on a full docking station" do
-			station.dock_bike(bike)
+			20.times {station.dock_bike(Bike.new)}
 			expect {station.dock_bike(Bike.new)}.to raise_error("No capacity")
 		end
 	end
