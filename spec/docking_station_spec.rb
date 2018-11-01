@@ -34,8 +34,13 @@ describe DockingStation do
 
 	describe 'no capacity' do 
 		it "throws an error if store bike is called on a full docking station" do
-			20.times {station.dock_bike(Bike.new)}
-			expect {station.dock_bike(Bike.new)}.to raise_error("No capacity")
+			DockingStation::DEFAULT_CAPACITY.times { station.dock_bike(Bike.new) }
+			expect { station.dock_bike(Bike.new) }.to raise_error("No capacity")
 		end
 	end
+	describe 'default capacity' do
+  	it 'has a default capacity' do
+    	expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+  	end
+  end
 end
