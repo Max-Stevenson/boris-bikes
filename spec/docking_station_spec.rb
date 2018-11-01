@@ -38,9 +38,18 @@ describe DockingStation do
 			expect { station.dock_bike(Bike.new) }.to raise_error("No capacity")
 		end
 	end
+
 	describe 'default capacity' do
   	it 'has a default capacity' do
-    	expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+    	expect(station.capacity).to eq DockingStation::DEFAULT_CAPACITY
+  	end
+  end
+
+  describe 'variable capacity' do
+  	it 'has a variable capacity' do
+  		capacity = rand(10)
+  		var_station = DockingStation.new(capacity)
+  		expect(var_station.capacity).to eq(capacity)
   	end
   end
 end
